@@ -17,10 +17,20 @@ vector<int> merge_sorted(vector<int> a, vector<int> b){
     for (int i = 0; i < a.size()+b.size(); i++){
         if (a[indA]<=b[indB]){
             x.push_back(a[indA]);
-            indA++;
+            if (indA != -1){
+                indA++;
+            }
+            if (indA == a.size()){
+                indA = -1;
+            }
         }else{
             x.push_back(b[indB]);
-            indB++;
+            if (indB != -1){
+                indA++;
+            }
+            if (indA == b.size()){
+                indB = -1;
+            }
         }
     }
     return x;
