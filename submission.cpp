@@ -26,9 +26,9 @@ vector<int> merge_sorted(vector<int> a, vector<int> b){
         }else{
             x.push_back(b[indB]);
             if (indB != -1){
-                indA++;
+                indB++;
             }
-            if (indA == b.size()){
+            if (indB == b.size()){
                 indB = -1;
             }
         }
