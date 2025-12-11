@@ -15,7 +15,7 @@ vector<int> merge_sorted(vector<int> a, vector<int> b){
     int indB = 0;
     vector<int> x;
     for (int i = 0; i < a.size()+b.size(); i++){
-        if (a[indA]<=b[indB]){
+        if (indA!=-1 && indB==-1||a[indA]<=b[indB]){
             x.push_back(a[indA]);
             if (indA != -1){
                 indA++;
